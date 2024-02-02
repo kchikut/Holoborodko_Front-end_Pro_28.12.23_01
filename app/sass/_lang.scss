@@ -1,0 +1,36 @@
+.lang {
+    padding-left: 0;
+    display: flex;
+
+    &__list {
+        list-style-type: none;
+        &-a {
+            border-radius: 8px;
+            background-color: transparent;
+            padding: 5px 7px;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: none;
+            &.active {
+                color: $white;
+                background-color: $accert;
+            }
+            &_dark {
+                color: $white;
+                &:hover {
+                    background-color: $dark;
+                }
+            }
+            &_light {
+                color: $text;
+                &:hover {
+                    background-color: $light;
+                }
+            }
+        }
+    }
+}

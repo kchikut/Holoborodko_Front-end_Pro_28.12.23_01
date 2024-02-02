@@ -1,0 +1,48 @@
+.footer {
+    background-color: $footer;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        &-link {
+            color: #B3B3BA;
+            font-size: 16px;
+            line-height: normal;
+            text-decoration: none;
+        }
+    }
+    &__adress {
+        display: flex;
+        &-text {
+            display: inline-flex;
+            color: $main;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            &::after {
+                content: '';
+                width: 6px;
+                height: 6px;
+                background-color: #B3B3BA;
+                border-radius: 50%;
+                margin-right: 6px;
+                margin-left: 6px;
+                display: block;
+                margin-top: 6px;
+            }
+        }
+        &-map {
+            color: $regular;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: none;
+            align-self: center;
+        }
+    }
+}

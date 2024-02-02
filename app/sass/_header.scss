@@ -1,0 +1,188 @@
+.header{
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: min-content min-content ;
+    margin: 0 -15px;
+    &__info {
+        grid-column: 1/-1;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 -15px;
+        padding: 10px 15px;
+        background-color: $bg;
+    }
+    &__adress {
+        font-size: 16px;
+        line-height: normal;
+        display: none;
+        &_dark {
+            color: $white;
+        }
+        &_light {
+            color: $text;
+        }
+    }
+    &__phone {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: normal;
+        text-decoration: none;
+        &_dark {
+            color: $white;
+        }
+        &_light {
+            color: $text;
+        }
+    }
+    &__fb {
+        display: none;
+    }
+    &__box {
+        display: flex;
+        padding-top: 15px;
+        &-logo {
+            &-img {
+                display: block;
+            }
+            &-page {
+                font-size: 20px;
+                line-height: normal;
+                display: flex;
+                &_dark {
+                    color: $white;
+                }
+                &_light {
+                    color: $main;
+                    font-size: 36px;
+                    line-height: normal;
+                }
+                &::before {
+                    content: '';
+                    background-image: url('../img/slash.svg');
+                    width: 12px;
+                    height: 26px;
+                    margin-right: 4px;
+                    margin-left: 4px;
+                }
+            }
+            &-first-page {
+                display: none;
+            }
+        }
+    }
+
+}
+@media (min-width: 768px) {
+    .header {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, min-content);
+        margin: 0 0;
+
+        &__info {
+            margin: 0;
+            padding: 50px 0 0 0;
+            background-color: transparent;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        &__adress {
+            display: inline-flex;
+            align-items: center;
+
+            &::before {
+                content: '';
+                width: 6px;
+                height: 6px;
+                background-color: $separator;
+                border-radius: 50%;
+                margin-right: 6px;
+                margin-left: 6px;
+                display: block;
+
+            }
+
+            &::after {
+                content: '';
+                width: 6px;
+                height: 6px;
+                background-color: $separator;
+                border-radius: 50%;
+                margin-right: 6px;
+                margin-left: 6px;
+                display: block;
+            }
+        }
+
+        &__phone {
+            display: inline-flex;
+            align-items: center;
+
+            &::after {
+                content: '';
+                width: 6px;
+                height: 6px;
+                background-color: $separator;
+                border-radius: 50%;
+                margin-right: 6px;
+                margin-left: 6px;
+                display: block;
+            }
+        }
+
+        &__fb {
+            display: block;
+            & path:hover {
+                fill:$accert;
+            }
+        }
+
+        &__box {
+            padding-top: 30px;
+            padding-bottom: 30px;
+
+            &-logo {
+                &-img {
+                    width: 130px;
+                    height: auto;
+                }
+
+                &-page {
+                    font-size: 36px;
+                    &::before {
+                        background-size: 21px 47px;
+                        width: 21px;
+                        height: 47px;
+                    }
+                }
+
+                &-first-page {
+
+                }
+            }
+        }
+    }
+}
+@media (min-width: 992px) {
+    .header {
+        grid-template-columns: min-content 1fr;
+        grid-template-rows: min-content min-content;
+        padding-top: 50px;
+        margin: 0 -15px;
+        &__info {
+            grid-column: 2 / -1;
+            justify-content: flex-end;
+            padding:0;
+        }
+        &__box {
+            grid-row: 1 / -1;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+}
+
+
+
+
+
